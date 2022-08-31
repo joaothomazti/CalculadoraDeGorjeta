@@ -24,20 +24,18 @@ class MainActivity : AppCompatActivity() {
         val valorEmString = binding.custoDoServico.text.toString()
         val valor = valorEmString.toDoubleOrNull()
         if (valor == null){
+            binding.resultadoTexto.text = ""
             return
         }
 
-        val idSelecionado = binding.atendimentoRadioGroup.checkedRadioButtonId
-
-        val porcentagem = when(idSelecionado) {
+        val porcentagem = when(binding.atendimentoRadioGroup.checkedRadioButtonId) {
             R.id.atendimento_incrivel -> 0.20
             R.id.atendimento_bom -> 0.15
             else -> 0.10
         }
         var resultadoValor = porcentagem * valor
-        val arredondar = binding.arredondarGorjeta.isChecked
 
-        if (arredondar) {
+        if (binding.arredondarGorjeta.isChecked) {
             resultadoValor = kotlin.math.ceil(resultadoValor)
         }
 
