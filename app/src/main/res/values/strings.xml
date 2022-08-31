@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculadora de gorjeta</string>
+    <string name="custo_do_servico">Custo do Servico</string>
+    <string name="como_foi_seu_atendimento">Como foi seu atendimento?</string>
+    <string name="incrivel_20">Incrivel(20%)</string>
+    <string name="bom_15">Bom(15%)</string>
+    <string name="ok_10">Ok(10%)</string>
+    <string name="arredondar_a_gorjeta">Arredondar a gorjeta?</string>
+    <string name="calcular">Calcular</string>
+    <string name="resultado">Resultado %s</string>
+</resources>
