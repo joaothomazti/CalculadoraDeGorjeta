@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.calculadoradegorjeta.databinding.ActivityMainBinding
 import java.text.NumberFormat
-import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +22,10 @@ class MainActivity : AppCompatActivity() {
     private fun calcularGorjeta() {
 
         val valorEmString = binding.custoDoServico.text.toString()
-        val valor = valorEmString.toDouble()
+        val valor = valorEmString.toDoubleOrNull()
+        if (valor == null){
+            return
+        }
 
         val idSelecionado = binding.atendimentoRadioGroup.checkedRadioButtonId
 
